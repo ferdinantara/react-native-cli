@@ -1,20 +1,31 @@
-import React from 'react';
-import { StyleSheet, Text, View ,Image} from 'react-native';
+import React,{Component} from 'react';
+import { Platform,StyleSheet, Text, View ,Image} from 'react-native';
+import Title from './Components/Title';
 
-export default class App extends React.Component {
+export default class index extends React.Component {
+
   render() {
     return (
+    	
       <View style={styles.container}>
-        <Text>Welcome to React Native app!</Text>
-        <Text>Nama Kukuh Adji Ferdinantara</Text>
-        <Text>Kelas XI RPL 4</Text>
-        <Text>NO. 20</Text>
-        <Text>my first react native app</Text>
+      	<Title/>
+        <Text style={styles.name}>
+        	Nama Kukuh Adji Ferdinantara
+        </Text>
+        <Text style={styles.name}>
+        	Kelas XI RPL 4
+        </Text>
+        <Text style={styles.name}>
+        	NO. 20
+        </Text>
+        <Text style={styles.teks}>
+        	My dumb react native app
+        </Text>
 
-        <Image style={{width: 50, height: 50}} 
-        source={require('./images/image1.android.jpg')} 
-        />
+        <Image style={{width: 100, height: 100}} 
+        source={require('./images/image1.android.jpg')}/>
       </View>
+
     );
   }
 }
@@ -24,6 +35,18 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#fff',
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'flex-start',
   },
+
+  name:{
+  	fontSize: 16,
+    textAlign: 'center',
+    margin: 20,
+  },
+
+  teks:{
+	fontSize: 12,
+	margin:10,
+  },
+
 });

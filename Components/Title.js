@@ -1,19 +1,19 @@
 import React from 'react';
-import{Text,view} from 'react-native';
+import {Text,view} from 'react-native';
 
 class Title extends React.Component {
 	render(){
 		return(
-			<Text style={decoration.title}>BIODATA</Text>
+			<Text style={decoration.title}>{this.props.title}</Text>
 		)
 	}
 }
 
 const decoration = {
 	title:{
-		backgroundColor:'#000',
-		color: '#fff',
-		fontSize: 64,
+		backgroundColor:'#202020',
+		color: '#f4f4f4',
+		fontSize: 48,
 	}
 }
 
